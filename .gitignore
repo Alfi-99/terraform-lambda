@@ -1,0 +1,40 @@
+# --- Terraform ---
+# Mengabaikan folder plugin dan modul lokal
+.terraform/
+
+# Mengabaikan file state (Berisi data sensitif tentang infrastruktur kamu)
+*.tfstate
+*.tfstate.backup
+
+# Mengabaikan file variabel (Jika kamu membuat file .tfvars untuk menyimpan password/key)
+*.tfvars
+*.tfvars.json
+
+# Mengabaikan file lock hasil inisialisasi
+.terraform.lock.hcl
+
+# --- AWS Lambda & Python ---
+# Mengabaikan file zip yang dihasilkan untuk deployment
+payload.zip
+
+# Mengabaikan library yang diinstall di folder src (GitHub Actions akan menginstallnya ulang)
+src/pymysql/
+src/*.dist-info/
+src/*.egg-info/
+
+# Mengabaikan cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Environment & Credentials ---
+# Mengabaikan file environment lokal
+.env
+.aws/
+credentials
+.vagrant/
+
+# --- Operating System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
