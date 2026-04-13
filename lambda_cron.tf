@@ -7,7 +7,7 @@ resource "aws_lambda_function" "cron" {
 
   # Kita tambahin s3 atau dummy supaya terraform gak error pas pertama apply
   # Tapi cara paling gampang buat lab: siapin payload.zip kosong dulu sekali
-  filename      = "payload.zip" 
+  filename = "payload.zip"
 
   vpc_config {
     subnet_ids         = [aws_subnet.subnet_a.id]

@@ -13,5 +13,5 @@ resource "aws_db_instance" "db" {
 
 resource "aws_db_subnet_group" "db_sub" {
   name       = "terraform-db-subnet"
-  subnet_ids = [aws_subnet.subnet_a.id] # Idealnya butuh 2 subnet di AZ berbeda untuk RDS
+  subnet_ids = [aws_subnet.subnet_a.id, aws_subnet.subnet_b.id]
 }
